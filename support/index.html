@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Realz Support — Help and contact</title>
+  <meta
+    name="description"
+    content="Support for Realz. Get help with verification, app access, and general questions."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <style>
+    .support-hero {
+      padding: 56px 0 24px;
+    }
+
+    .support-hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .support-card,
+    .contact-card,
+    .form-card {
+      padding: 28px;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(180deg, rgba(15, 26, 46, 0.88), rgba(6, 12, 24, 0.92));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .support-card::before,
+    .contact-card::before,
+    .form-card::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      background:
+        radial-gradient(circle at 12% 12%, rgba(102,255,178,0.10), transparent 26%),
+        radial-gradient(circle at 88% 12%, rgba(45,168,255,0.14), transparent 26%);
+      pointer-events: none;
+    }
+
+    .support-card > *,
+    .contact-card > *,
+    .form-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .support-card h3,
+    .contact-card h3,
+    .form-card h3 {
+      margin: 0 0 12px;
+      font-size: 1.2rem;
+      letter-spacing: -0.03em;
+    }
+
+    .support-card p,
+    .contact-card p,
+    .form-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .support-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .small-note {
+      color: var(--muted-2);
+      font-size: 0.95rem;
+      margin-top: 12px;
+    }
+
+    .contact-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .contact-item {
+      padding: 22px;
+      border-radius: var(--radius-lg);
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-item h4 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .contact-item p,
+    .contact-item a {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      word-break: break-word;
+    }
+
+    .contact-item a {
+      color: #d8f2ff;
+      font-weight: 600;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--bg-card);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 20px 22px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      position: relative;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      color: var(--accent-cyan);
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .faq-item[open] summary::after {
+      content: "–";
+    }
+
+    .faq-content {
+      padding: 0 22px 20px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .faq-content p {
+      margin: 0 0 12px;
+    }
+
+    .faq-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .inline-link {
+      color: #d8f2ff;
+      font-weight: 600;
+    }
+
+    .support-form-wrap {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .form-status {
+      display: none;
+      margin: 0 0 12px;
+      padding: 14px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(102, 255, 178, 0.20);
+      background: rgba(11, 29, 38, 0.82);
+      color: #eefcff;
+      line-height: 1.6;
+    }
+
+    .form-status.is-visible {
+      display: block;
+    }
+
+    .form-status.is-success {
+      border-color: rgba(102, 255, 178, 0.32);
+      background: rgba(12, 34, 30, 0.78);
+    }
+
+    .form-status.is-error {
+      border-color: rgba(255, 102, 126, 0.36);
+      background: rgba(42, 16, 24, 0.78);
+    }
+
+    .formgrid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .field label {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #dce8f8;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      border: 1px solid rgba(126, 154, 197, 0.22);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+      border-radius: 14px;
+      padding: 14px 14px;
+      font: inherit;
+      outline: none;
+      transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: #8a97ad;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: rgba(45, 168, 255, 0.42);
+      box-shadow: 0 0 0 4px rgba(45, 168, 255, 0.10);
+      background: rgba(255, 255, 255, 0.055);
+    }
+
+    .field textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .submitrow {
+      margin-top: 16px;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .button.full {
+      min-width: 220px;
+    }
+
+    .formhint {
+      margin-top: 14px !important;
+      color: var(--muted-2) !important;
+      font-size: 0.94rem;
+      line-height: 1.7 !important;
+    }
+
+    @media (max-width: 1024px) {
+      .support-hero-grid,
+      .contact-strip {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .support-hero {
+        padding-top: 30px;
+      }
+
+      .formgrid {
+        grid-template-columns: 1fr;
+      }
+
+      .submitrow {
+        justify-content: stretch;
+      }
+
+      .button.full {
+        width: 100%;
+        min-width: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-bg"></div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="../" class="brand" aria-label="Realz home">
+        <div class="brand-mark brand-mark-small" aria-hidden="true">
+          <svg
+            class="realz-logo-svg"
+            viewBox="0 0 120 120"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Realz logo"
+          >
+            <defs>
+              <linearGradient id="realzGradOuterSupportNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#66FFB2" />
+                <stop offset="100%" stop-color="#2DA8FF" />
+              </linearGradient>
+              <linearGradient id="realzGradInnerSupportNav" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#66FFB2" />
+                <stop offset="100%" stop-color="#2DA8FF" />
+              </linearGradient>
+              <filter id="logoGlowSupportNav" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="2.2" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+
+            <g class="outer-ring" filter="url(#logoGlowSupportNav)" stroke="url(#realzGradOuterSupportNav)" stroke-width="10" stroke-linecap="butt" fill="none">
+              <path d="M 27.07 23.46 A 44 44 0 0 1 68.86 16.96" />
+              <path d="M 96.54 27.07 A 44 44 0 0 1 103.04 68.86" />
+              <path d="M 92.93 96.54 A 44 44 0 0 1 51.14 103.04" />
+              <path d="M 23.46 92.93 A 44 44 0 0 1 16.96 51.14" />
+            </g>
+
+            <g class="inner-ring-spin" filter="url(#logoGlowSupportNav)" stroke="url(#realzGradInnerSupportNav)" stroke-width="8" stroke-linecap="butt" fill="none">
+              <path d="M 39.52 27.44 A 28 28 0 0 1 80.48 92.56" />
+              <path d="M 80.48 27.44 A 28 28 0 0 1 39.52 92.56" />
+            </g>
+          </svg>
+        </div>
+        <span class="brand-text">Realz</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="../">Home</a>
+        <a href="../#technology">Technology</a>
+        <a href="../#use-cases">Use cases</a>
+        <a href="https://getrealz.app" target="_blank" rel="noreferrer">Verify</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="support-hero">
+      <div class="container support-hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">Support</div>
+          <h1>Help for Realz</h1>
+          <p class="hero-lead">
+            Need help with verification, app access, or a Realz link that does not behave as expected?
+            This page is the best place to start.
+          </p>
+          <p class="hero-secondary">
+            Realz is built to make authenticity easier to understand and easier to verify.
+            Support should feel just as simple and trustworthy as the product itself.
+          </p>
+
+          <div class="support-actions">
+            <a class="button button-primary" href="#contact">Contact support</a>
+            <a class="button button-secondary" href="https://getrealz.app" target="_blank" rel="noreferrer">
+              Open verify service
+            </a>
+            <a class="button button-secondary" href="../">Back to realz.me</a>
+          </div>
+
+          <div class="small-note">
+            Messages sent through the form go directly into the same support flow you already use.
+          </div>
+        </div>
+
+        <div class="support-card reveal">
+          <h3>What we can help with</h3>
+          <p>
+            Support covers questions about verification, invalid or incomplete verify links,
+            app-related access issues, launch availability, and general questions about how
+            Realz works.
+          </p>
+
+          <div class="hero-facts" style="margin-top: 18px;">
+            <div class="fact-row">
+              <span>Primary support channel</span>
+              <strong>Support form</strong>
+            </div>
+            <div class="fact-row">
+              <span>Verification service</span>
+              <strong>getrealz.app</strong>
+            </div>
+            <div class="fact-row">
+              <span>Response target</span>
+              <strong>1–3 business days</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 30px;">
+      <div class="container">
+        <div class="contact-strip">
+          <article class="contact-item reveal">
+            <h4>Support form</h4>
+            <p>
+              Use the form below to contact Realz support.
+            </p>
+          </article>
+
+          <article class="contact-item reveal">
+            <h4>Verification service</h4>
+            <p>
+              Public verification is available at
+              <a href="https://getrealz.app" target="_blank" rel="noreferrer">getrealz.app</a>
+            </p>
+          </article>
+
+          <article class="contact-item reveal">
+            <h4>Main site</h4>
+            <p>
+              Product and overview information is available at
+              <a href="../">realz.me</a>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container support-form-wrap">
+        <article class="form-card reveal" id="contact">
+          <h3>Contact</h3>
+          <p style="margin: 0 0 14px;">
+            Use the form below to contact support. Please include as many details as possible.
+          </p>
+
+          <div id="form-status" class="form-status" aria-live="polite"></div>
+
+          <iframe
+            id="formcarry_iframe"
+            name="formcarry_hidden_iframe"
+            style="display:none;"
+            title="Hidden form submit target"
+          ></iframe>
+
+          <form
+            id="realz-support-form"
+            action="https://formcarry.com/s/arQi40sZeJz"
+            method="POST"
+            accept-charset="UTF-8"
+            target="formcarry_hidden_iframe"
+          >
+            <input type="text" name="company" tabindex="-1" autocomplete="off" style="display:none" />
+            <input type="hidden" name="_next" id="nextField" value="" />
+            <input type="hidden" name="app" value="realz" />
+            <input type="hidden" name="source" value="realz_support" />
+
+            <div class="formgrid">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+
+            <div class="field" style="margin-top:12px;">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option>Verification issue</option>
+                <option>Broken verify link</option>
+                <option>Bug report</option>
+                <option>Feature request</option>
+                <option>General question</option>
+              </select>
+            </div>
+
+            <div class="field" style="margin-top:12px;">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell us what happened, what you expected, and include device/OS if relevant."
+                required
+              ></textarea>
+            </div>
+
+            <div class="submitrow">
+              <button class="button button-primary full" type="submit">Send message</button>
+            </div>
+
+            <p class="formhint">
+              Please avoid sharing sensitive personal information. If you are reporting a bug,
+              include where in the app it happened, what device you used, and your OS version.
+            </p>
+          </form>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Frequently asked questions</span>
+          <h2>Common questions</h2>
+          <p>
+            These are the questions most people are likely to have first. You can expand each item below.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>How does verification work in Realz?</summary>
+            <div class="faq-content">
+              <p>
+                Realz is designed to make it possible to verify that an image has not been altered after capture.
+                The exact verification flow is tied to the Realz capture process and the availability of a public proof.
+              </p>
+              <p>
+                In practice, this means verification is based on more than how the image looks. It is based on whether
+                the image was captured in a way that allows Realz to later confirm its integrity.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Why does the image need to be taken inside the Realz app?</summary>
+            <div class="faq-content">
+              <p>
+                The proof model depends on the original capture event. For that reason, verification is only possible
+                when the image is captured directly inside Realz.
+              </p>
+              <p>
+                A photo imported from another camera roll or downloaded from somewhere else does not carry the same
+                capture context, which means Realz cannot provide the same integrity guarantees for it.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>What is a public cryptographic proof?</summary>
+            <div class="faq-content">
+              <p>
+                In simple terms, it is a technical proof linked to the original capture that can be used to validate
+                whether the image still matches its original state.
+              </p>
+              <p>
+                “Public” means the proof can be checked through the Realz verification flow rather than only being
+                visible to the original user privately.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Why does a verify link say invalid?</summary>
+            <div class="faq-content">
+              <p>
+                A verify link may be invalid if the proof identifier is missing, malformed, incomplete, or no longer
+                resolves correctly in the verification flow.
+              </p>
+              <p>
+                If the issue continues, use the support form above and include the link you used if possible.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Where can I verify an image right now?</summary>
+            <div class="faq-content">
+              <p>
+                The verification service is available at
+                <a class="inline-link" href="https://getrealz.app" target="_blank" rel="noreferrer">getrealz.app</a>.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Is the mobile app available yet?</summary>
+            <div class="faq-content">
+              <p>
+                Not yet. Realz is still under development for iPhone and Android.
+                The website currently presents the product and the verification direction, while app availability
+                will follow later.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Realz</strong><br />
+        Verify your moment
+      </div>
+
+      <div class="footer-links">
+        <a href="../">Home</a>
+        <a href="#contact">Support form</a>
+        <a href="https://getrealz.app" target="_blank" rel="noreferrer">getrealz.app</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script>
+    (function () {
+      const nextField = document.getElementById("nextField");
+      const statusBox = document.getElementById("form-status");
+      const form = document.getElementById("realz-support-form");
+      const iframe = document.getElementById("formcarry_iframe");
+
+      if (nextField) {
+        nextField.value = window.location.origin + window.location.pathname + "?submitted=1#contact";
+      }
+
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("submitted") === "1") {
+        statusBox.textContent = "Your message was sent successfully. Thanks — we’ll review it as soon as possible.";
+        statusBox.className = "form-status is-visible is-success";
+      }
+
+      if (form && iframe) {
+        form.addEventListener("submit", function () {
+          statusBox.textContent = "Sending your message...";
+          statusBox.className = "form-status is-visible";
+        });
+
+        iframe.addEventListener("load", function () {
+          const paramsNow = new URLSearchParams(window.location.search);
+
+          if (!paramsNow.get("submitted")) {
+            const url = new URL(window.location.href);
+            url.searchParams.set("submitted", "1");
+            url.hash = "contact";
+            window.history.replaceState({}, "", url.toString());
+
+            statusBox.textContent = "Your message was sent successfully. Thanks — we’ll review it as soon as possible.";
+            statusBox.className = "form-status is-visible is-success";
+
+            form.reset();
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

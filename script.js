@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const revealTargets = document.querySelectorAll(
-    ".section-heading, .info-card, .verify-banner, .store-card, .hero-card, .hero-copy"
-  );
+  const revealTargets = document.querySelectorAll(".reveal");
 
-  revealTargets.forEach((el) => el.classList.add("reveal"));
+  if (!revealTargets.length) return;
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -15,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.12,
+      threshold: 0.08,
       rootMargin: "0px 0px -40px 0px",
     }
   );

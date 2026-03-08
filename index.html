@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Realz — Verify your moment</title>
+  <meta
+    name="description"
+    content="Realz helps prove that a photo was captured as it happened — with a public cryptographic proof that can be verified by anyone."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-bg"></div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="brand" aria-label="Realz home">
+        <div class="brand-mark brand-mark-small" aria-hidden="true">
+          <svg
+            class="realz-logo-svg"
+            viewBox="0 0 120 120"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Realz logo"
+          >
+            <defs>
+              <linearGradient id="realzGradOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#66FFB2" />
+                <stop offset="100%" stop-color="#2DA8FF" />
+              </linearGradient>
+              <linearGradient id="realzGradInner" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#66FFB2" />
+                <stop offset="100%" stop-color="#2DA8FF" />
+              </linearGradient>
+              <filter id="logoGlow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="2.2" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+
+            <g class="outer-ring" filter="url(#logoGlow)" stroke="url(#realzGradOuter)" stroke-width="10" stroke-linecap="butt" fill="none">
+              <path d="M 27.07 23.46 A 44 44 0 0 1 68.86 16.96" />
+              <path d="M 96.54 27.07 A 44 44 0 0 1 103.04 68.86" />
+              <path d="M 92.93 96.54 A 44 44 0 0 1 51.14 103.04" />
+              <path d="M 23.46 92.93 A 44 44 0 0 1 16.96 51.14" />
+            </g>
+
+            <g class="inner-ring-spin" filter="url(#logoGlow)" stroke="url(#realzGradInner)" stroke-width="8" stroke-linecap="butt" fill="none">
+              <path d="M 39.52 27.44 A 28 28 0 0 1 80.48 92.56" />
+              <path d="M 80.48 27.44 A 28 28 0 0 1 39.52 92.56" />
+            </g>
+
+            <g class="specular">
+              <path
+                d="M 73.79 19.85 A 40 40 0 0 1 98.42 43.96"
+                stroke="rgba(255,255,255,0.18)"
+                stroke-width="6"
+                fill="none"
+                stroke-linecap="butt"
+              />
+            </g>
+          </svg>
+        </div>
+        <span class="brand-text">Realz</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#problem">Why Realz</a>
+        <a href="#technology">Technology</a>
+        <a href="#use-cases">Use cases</a>
+        <a href="#availability">Availability</a>
+        <a href="https://getrealz.app" target="_blank" rel="noreferrer">Verify</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Authenticity, made practical</div>
+          <h1>Verify your moment</h1>
+          <p class="hero-lead">
+            Realz is built for a world where AI-generated images, deepfakes,
+            deceptive edits, and aggressive social media filters make visual trust harder than ever.
+            It helps prove that a photo was captured as it happened.
+          </p>
+
+          <p class="hero-secondary">
+            When an image is taken inside the Realz app, a
+            <strong>public cryptographic proof</strong> can be created and made available for
+            independent verification. That makes it possible to show not just the image itself,
+            but that the image has not been tampered with after capture.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#availability">Get the app</a>
+            <a class="button button-secondary" href="https://getrealz.app" target="_blank" rel="noreferrer">
+              Open verify service
+            </a>
+          </div>
+
+          <div class="hero-links">
+            <span>Marketing site:</span>
+            <a href="https://realz.me" target="_blank" rel="noreferrer">realz.me</a>
+            <span class="dot">•</span>
+            <span>Verification service:</span>
+            <a href="https://getrealz.app" target="_blank" rel="noreferrer">getrealz.app</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="hero-card-header">
+              <div class="brand-mark brand-mark-large" aria-hidden="true">
+                <svg
+                  class="realz-logo-svg"
+                  viewBox="0 0 120 120"
+                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
+                  aria-label="Realz logo"
+                >
+                  <defs>
+                    <linearGradient id="realzGradOuterLarge" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#66FFB2" />
+                      <stop offset="100%" stop-color="#2DA8FF" />
+                    </linearGradient>
+                    <linearGradient id="realzGradInnerLarge" x1="0%" y1="100%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#66FFB2" />
+                      <stop offset="100%" stop-color="#2DA8FF" />
+                    </linearGradient>
+                    <filter id="logoGlowLarge" x="-50%" y="-50%" width="200%" height="200%">
+                      <feGaussianBlur stdDeviation="2.8" result="blur" />
+                      <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                  </defs>
+
+                  <g class="outer-ring" filter="url(#logoGlowLarge)" stroke="url(#realzGradOuterLarge)" stroke-width="10" stroke-linecap="butt" fill="none">
+                    <path d="M 27.07 23.46 A 44 44 0 0 1 68.86 16.96" />
+                    <path d="M 96.54 27.07 A 44 44 0 0 1 103.04 68.86" />
+                    <path d="M 92.93 96.54 A 44 44 0 0 1 51.14 103.04" />
+                    <path d="M 23.46 92.93 A 44 44 0 0 1 16.96 51.14" />
+                  </g>
+
+                  <g class="inner-ring-spin" filter="url(#logoGlowLarge)" stroke="url(#realzGradInnerLarge)" stroke-width="8" stroke-linecap="butt" fill="none">
+                    <path d="M 39.52 27.44 A 28 28 0 0 1 80.48 92.56" />
+                    <path d="M 80.48 27.44 A 28 28 0 0 1 39.52 92.56" />
+                  </g>
+
+                  <g class="specular">
+                    <path
+                      d="M 73.79 19.85 A 40 40 0 0 1 98.42 43.96"
+                      stroke="rgba(255,255,255,0.18)"
+                      stroke-width="6"
+                      fill="none"
+                      stroke-linecap="butt"
+                    />
+                  </g>
+                </svg>
+              </div>
+
+              <div>
+                <div class="hero-card-title">Realz</div>
+                <div class="hero-card-subtitle">Public authenticity verification</div>
+              </div>
+            </div>
+
+            <div class="status-pill">Coming soon</div>
+
+            <div class="hero-panel">
+              <div class="panel-title">Why this matters</div>
+              <p>
+                A photo can be beautiful, persuasive, viral — and still be misleading.
+                Realz is designed to help restore confidence in what people share.
+              </p>
+            </div>
+
+            <div class="hero-facts">
+              <div class="fact-row">
+                <span>Proof model</span>
+                <strong>Cryptographic</strong>
+              </div>
+              <div class="fact-row">
+                <span>Verification</span>
+                <strong>Publicly verifiable</strong>
+              </div>
+              <div class="fact-row">
+                <span>Capture requirement</span>
+                <strong>Taken in Realz</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">The challenge</span>
+          <h2>Trust in images is no longer automatic</h2>
+          <p>
+            Deepfakes, synthetic media, AI-assisted editing, beauty filters, and image manipulation
+            are becoming more powerful, more accessible, and harder to detect. The result is simple:
+            people increasingly need a better way to distinguish documentation from fabrication.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="info-card">
+            <h3>AI-generated deception</h3>
+            <p>
+              Photorealistic synthetic images can now imitate people, places, and events with alarming credibility.
+              In high-trust contexts, that creates both reputational and practical risk.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Edited reality</h3>
+            <p>
+              Even when an image starts as a real photo, heavy retouching, compositing, and filters can make it
+              impossible to know what actually happened in the original moment.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Fraud and impersonation</h3>
+            <p>
+              As visual manipulation becomes cheaper and faster, scams, identity abuse, and misleading image-based claims
+              become easier to execute at scale.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container split-section">
+        <div>
+          <span class="eyebrow">The Realz approach</span>
+          <h2>Designed to support authenticity — not just appearance</h2>
+        </div>
+        <div>
+          <p>
+            Realz is not just another camera or photo-sharing experience. It is built around the idea
+            that a meaningful image should be able to carry evidence of its integrity.
+          </p>
+          <p>
+            By combining capture inside the Realz app with a public verification flow,
+            the platform gives users a practical way to demonstrate that an image has not been
+            altered after it was taken.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="technology" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Technical overview</span>
+          <h2>Small details, important guarantees</h2>
+          <p>
+            Realz is intentionally simple to use, but the verification model is grounded in technical principles
+            that are meant to be understandable, inspectable, and useful in practice.
+          </p>
+        </div>
+
+        <div class="cards-grid tech-grid">
+          <article class="info-card">
+            <h3>Cryptographic proof</h3>
+            <p>
+              When a photo is captured in Realz, the system can generate a public cryptographic proof
+              linked to that original capture event. This creates a stronger basis for integrity than
+              visual appearance alone.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Publicly verifiable</h3>
+            <p>
+              Verification is designed to be public. That means other people can validate the proof
+              through the Realz verification service, rather than relying only on private claims
+              or screenshots of “trust me” indicators.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Captured in Realz</h3>
+            <p>
+              For this to work, the image must be taken directly in the Realz app.
+              The proof is tied to the original capture flow, which is what makes later verification possible.
+            </p>
+          </article>
+        </div>
+
+        <div class="verify-banner">
+          <div>
+            <div class="verify-banner-title">Already live: public verification</div>
+            <p>
+              The verification component of the service is already available at getrealz.app.
+            </p>
+          </div>
+          <a class="button button-secondary" href="https://getrealz.app" target="_blank" rel="noreferrer">
+            Visit getrealz.app
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="use-cases" class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Use cases</span>
+          <h2>Where authenticity matters most</h2>
+          <p>
+            Realz is relevant anywhere an image is meant to document something real —
+            whether that is a person, a product, an event, or a moment that should be trusted as captured.
+          </p>
+        </div>
+
+        <div class="cards-grid use-grid">
+          <article class="info-card">
+            <h3>Journalism & field reporting</h3>
+            <p>
+              Support confidence that a published image reflects the original capture rather than an altered derivative.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Marketplaces & listings</h3>
+            <p>
+              Help buyers trust that product images represent the real item and have not been manipulated after capture.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Dating & social identity</h3>
+            <p>
+              Reduce uncertainty around heavily filtered or misleading profile imagery by enabling verifiable capture.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Events & experiences</h3>
+            <p>
+              Preserve moments with a stronger authenticity signal, especially when proof of originality matters later.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Professional documentation</h3>
+            <p>
+              Useful in contexts where image integrity contributes to credibility, reviewability, or evidentiary value.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Social sharing with trust</h3>
+            <p>
+              Make it easier to share real moments online without asking others to guess what is edited, filtered, or synthetic.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="availability" class="section">
+      <div class="container availability-wrap">
+        <div class="section-heading narrow">
+          <span class="eyebrow">Availability</span>
+          <h2>Realz is coming to mobile</h2>
+          <p>
+            The app is planned for both iPhone and Android. Store availability is still under development,
+            but the platform direction is clear: simple onboarding, clear verification, and fast access to trusted capture.
+          </p>
+        </div>
+
+        <div class="store-grid">
+          <div class="store-card">
+            <div class="store-icon"></div>
+            <div>
+              <h3>App Store</h3>
+              <p>Under development</p>
+            </div>
+          </div>
+
+          <div class="store-card">
+            <div class="store-icon">▶</div>
+            <div>
+              <h3>Google Play</h3>
+              <p>Under development</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="availability-note">
+          Want to explore verification right now? Visit
+          <a href="https://getrealz.app" target="_blank" rel="noreferrer">getrealz.app</a>.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Realz</strong><br />
+        Verify your moment
+      </div>
+
+      <div class="footer-links">
+        <a href="https://realz.me" target="_blank" rel="noreferrer">realz.me</a>
+        <a href="https://getrealz.app" target="_blank" rel="noreferrer">getrealz.app</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

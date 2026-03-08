@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>Realz — Terms of Service | KAPSDEVELOPMENT AS</title>
+  <meta name="description" content="Terms of Service for the Realz app by KAPSDEVELOPMENT AS." />
+
+  <style>
+    :root{
+      --bg:#0f0f10;
+      --panel:rgba(255,255,255,0.06);
+      --text:rgba(255,255,255,0.92);
+      --muted:rgba(255,255,255,0.68);
+      --border:rgba(255,255,255,0.12);
+      --accent:#18B6A3;
+      --link:#7ee9dc;
+      --max:860px;
+      --radius:16px;
+    }
+/*
+    @media (prefers-color-scheme: light) {
+      :root{
+        --bg:#f7f6f3;
+        --panel:rgba(0,0,0,0.04);
+        --text:rgba(0,0,0,0.90);
+        --muted:rgba(0,0,0,0.62);
+        --border:rgba(0,0,0,0.12);
+        --link:#0f6f64;
+      }
+    }
+*/
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: transparent;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:28px 18px 80px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border:1px solid var(--border);
+      background:var(--panel);
+      border-radius:var(--radius);
+    }
+
+    .dot{
+      width:10px;height:10px;border-radius:999px;
+      background:var(--accent);
+      box-shadow:0 0 0 4px rgba(24,182,163,0.18);
+    }
+
+    h1{
+      font-size: clamp(26px, 3.2vw, 36px);
+      margin: 10px 0 2px;
+      letter-spacing:-0.02em;
+    }
+
+    .subtitle{
+      color:var(--muted);
+      margin:0;
+      font-size:14px;
+    }
+
+    .meta{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:10px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(0,0,0,0.10);
+    }
+
+    @media (prefers-color-scheme: light){
+      .pill{ background: rgba(255,255,255,0.6); }
+    }
+
+    .card{
+      border:1px solid var(--border);
+      background:var(--panel);
+      border-radius:var(--radius);
+      padding:18px;
+      margin-top:14px;
+    }
+
+    h2{
+      font-size:18px;
+      margin:22px 0 10px;
+      letter-spacing:-0.01em;
+    }
+
+    .card h2{ margin-top:0; }
+
+    p{ margin:10px 0; }
+    ul{ margin:8px 0 8px 22px; }
+    li{ margin:6px 0; }
+
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .hr{
+      height:1px;
+      background:var(--border);
+      margin:18px 0;
+    }
+
+    .callout{
+      border: 1px solid rgba(24,182,163,0.35);
+      background: rgba(24,182,163,0.08);
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin: 14px 0;
+    }
+
+    .callout strong{ color: var(--accent); }
+
+    .footer{
+      margin-top:26px;
+      color:var(--muted);
+      font-size:13px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <div class="badge">
+      <span class="dot" aria-hidden="true"></span>
+      <strong>Realz</strong>
+      <span style="color:var(--muted)">by KAPSDEVELOPMENT AS</span>
+    </div>
+
+    <h1>Terms of Service</h1>
+    <p class="subtitle">These terms govern your use of the Realz service.</p>
+
+    <div class="meta">
+      <span class="pill"><strong>Applies to:</strong> Realz mobile app, website, and related services</span>
+      <span class="pill"><strong>Last updated:</strong> 2026-03-08</span>
+    </div>
+
+    <section class="card">
+      <p>
+        Welcome to Realz.
+      </p>
+
+      <p>
+        These Terms of Service (“Terms”) govern your access to and use of the Realz mobile application,
+        website, and related services (collectively, the “Service”).
+      </p>
+
+      <p>
+        The Service is operated by <strong>KAPSDEVELOPMENT AS</strong>, organization number
+        <strong>937284624</strong>, Norway.
+      </p>
+
+      <div class="callout">
+        <strong>Important:</strong> By using Realz, you agree to these Terms. If you do not agree,
+        you may not use the Service.
+      </div>
+
+      <div class="hr"></div>
+
+      <h2>1. About Realz</h2>
+      <p>
+        Realz is a system designed to help users create and share verifiable images.
+      </p>
+      <p>
+        When you capture an image using Realz:
+      </p>
+      <ul>
+        <li>The image may be processed to generate a cryptographic proof.</li>
+        <li>A verification page may be created for public verification.</li>
+        <li>Metadata necessary for verification may be stored.</li>
+      </ul>
+      <p>
+        Realz provides tools for verifiable capture and integrity verification.
+      </p>
+      <p>
+        Realz verifies the integrity of capture data, but does not guarantee the truthfulness or authenticity
+        of captured content or events.
+      </p>
+
+      <div class="hr"></div>
+
+      <h2>2. Eligibility</h2>
+      <p>
+        You must be at least 13 years old to use Realz.
+      </p>
+      <p>
+        If you are under the age of majority in your jurisdiction, you must have permission from a parent
+        or legal guardian.
+      </p>
+
+      <div class="hr"></div>
+
+      <h2>3. User Accounts</h2>
+      <p>
+        To use Realz, you must create a user account.
+      </p>
+      <p>
+        You agree to:
+      </p>
+      <ul>
+        <li>Provide accurate information.</li>
+        <li>Keep your login credentials secure.</li>
+        <li>Notify us of unauthorized access to your account.</li>
+      </ul>
+      <p>
+        You are responsible for activity occurring under your account.
+      </p>
+
+      <div class="hr"></div>
+
+      <h2>4. Content You Capture</h2>
+      <p>
+        You retain ownership of images you capture using Realz.
+      </p>
+      <p>
+        By using the Service, you grant Realz permission to:
+      </p>
+      <ul>
+        <li>Process images to generate verification proofs.</li>
+        <li>Store images and necessary metadata for verification purposes.</li>
+        <li>Display verification results on public verification pages when content is shared.</li>
+      </ul>
+      <p>
+        Storage of images and metadata may be necessary to support future verification requests or integrity
+        checks within the system.
+      </p>
+      <p>
+        You may delete your images at any time through the Service.
+      </p>
+      <p>
+        Realz does not claim ownership of your images.
+      </p>
+
+      <div class="hr"></div>
+
+      <h2>5. Public Verification Pages</h2>
+      <p>
+        If you choose to share a Realz image:
+      </p>
+      <ul>
+        <li>A public verification page may be created.</li>
+        <li>This page may include verification metadata.</li>
+        <li>The page may remain accessible even if the image itself is deleted.</li>
+      </ul>
+      <p>
+        If a proof is revoked or deleted, the verification page may display a message such as:
+      </p>
+      <p>
+        <strong>“Deleted by owner”</strong>
+      </p>
+      <p>
+        This helps preserve the integrity and transparency of the verification system.
+      </p>
+
+      <div class="hr"></div>
+
+      <h2>6. Content Responsibility</h2>
+      <p>
+        You are responsible for the images and content you capture and share.
+      </p>
+      <p>
+        You agree not to use Realz to:
+      </p>
+      <ul>
+        <li>Violate applicable laws.</li>
+        <li>Harass or harm others.</li>
+        <li>Distribute illegal content.</li>
+        <li>Impersonate others.</li>
+        <li>Create misleading claims about verification.</li>
+      </ul>
+      <p>
+        Realz may suspend or terminate accounts that misuse the Service.
+      </p>
+
+      <div class="hr"></div>
+
+      <h2>7. Deletion and Revocation</h2>
+      <p>
+        Users may delete images from their account.
+      </p>
+      <p>
+        When an image is deleted:
+      </p>
+      <ul>
+        <li>Stored image files may be removed.</li>
+        <li>The verification proof may be revoked.</li>
+        <li>The public verification page may indicate that the proof was revoked.</li>
+      </ul>
+      <p>
+        Revocation ensures transparency and prevents reuse of proof identifiers.
+      </p>
+
+      <div class="hr"></div>
+
+      <h2>8. Availability of the Service</h2>
+      <p>
+        Realz is provided <strong>“as is”</strong>.
+      </p>
+      <p>
+        We do not guarantee:
+      </p>
+      <ul>
+        <li>Uninterrupted availability.</li>
+        <li>Permanent storage of images.</li>
+        <li>Compatibility with all devices.</li>
+      </ul>
+      <p>
+        We may modify or discontinue parts of the Service at any time.
+      </p>
+
+      <div class="hr"></div>
+
+      <h2>9. Limitation of Liability</h2>
+      <p>
+        To the maximum extent permitted by law, <strong>KAPSDEVELOPMENT AS</strong> is not liable for:
+      </p>
+      <ul>
+        <li>Misuse of captured images.</li>
+        <li>User-generated content.</li>
+        <li>Decisions made based on verification results.</li>
+        <li>Indirect or consequential damages.</li>
+      </ul>
+      <p>
+        Realz provides verification tools, not guarantees of truth.
+      </p>
+
+      <div class="hr"></div>
+
+      <h2>10. Changes to the Terms</h2>
+      <p>
+        We may update these Terms from time to time.
+      </p>
+      <p>
+        If we make significant changes, we will update the “Last updated” date.
+      </p>
+      <p>
+        Continued use of the Service means you accept the updated Terms.
+      </p>
+
+      <div class="hr"></div>
+
+      <h2>11. Contact</h2>
+      <p>
+        If you have questions about these Terms, contact:
+      </p>
+      <p>
+        <strong>KAPSDEVELOPMENT AS</strong><br />
+        Organization number: <strong>937284624</strong><br />
+        Norway
+      </p>
+      <p>
+        Email: <a href="mailto:contact@kapsdevelopment.com">contact@kapsdevelopment.com</a>
+      </p>
+    </section>
+
+    <p class="footer">
+      © <span id="year"></span> KAPSDEVELOPMENT AS •
+      <a href="https://www.kapsdevelopment.com">kapsdevelopment.com</a>
+    </p>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

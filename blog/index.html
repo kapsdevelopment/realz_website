@@ -3,17 +3,96 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Blog | Realz</title>
+  <meta
+    name="description"
+    content="Realz documents incidents related to deepfakes, AI impersonation, synthetic media, and digital trust."
+  >
+
+  
+  <link rel="canonical" href="https://realz.me/blog/">
+  
+
+  <meta property="og:title" content="Blog | Realz">
+  <meta property="og:description" content="Realz documents incidents related to deepfakes, AI impersonation, synthetic media, and digital trust.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Realz">
+
+  
+  <meta property="og:url" content="https://realz.me/blog/">
+  
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog | Realz">
+  <meta name="twitter:description" content="Realz documents incidents related to deepfakes, AI impersonation, synthetic media, and digital trust.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="/styles.css">
+
+  
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/incidents">Incidents</a>
-      <a href="/blog">Blog</a>
-      <a href="/support">Support</a>
-    </nav>
+  <div class="page-bg"></div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="brand" aria-label="Realz home">
+        <div class="brand-mark brand-mark-small" aria-hidden="true">
+          <svg
+            class="realz-logo-svg"
+            viewBox="0 0 120 120"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Realz logo"
+          >
+            <defs>
+              <linearGradient id="realzGradOuterBaseNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#66FFB2" />
+                <stop offset="100%" stop-color="#2DA8FF" />
+              </linearGradient>
+              <linearGradient id="realzGradInnerBaseNav" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#66FFB2" />
+                <stop offset="100%" stop-color="#2DA8FF" />
+              </linearGradient>
+              <filter id="logoGlowBaseNav" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="2.2" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+
+            <g class="outer-ring" filter="url(#logoGlowBaseNav)" stroke="url(#realzGradOuterBaseNav)" stroke-width="10" stroke-linecap="butt" fill="none">
+              <path d="M 27.07 23.46 A 44 44 0 0 1 68.86 16.96" />
+              <path d="M 96.54 27.07 A 44 44 0 0 1 103.04 68.86" />
+              <path d="M 92.93 96.54 A 44 44 0 0 1 51.14 103.04" />
+              <path d="M 23.46 92.93 A 44 44 0 0 1 16.96 51.14" />
+            </g>
+
+            <g class="inner-ring-spin" filter="url(#logoGlowBaseNav)" stroke="url(#realzGradInnerBaseNav)" stroke-width="8" stroke-linecap="butt" fill="none">
+              <path d="M 39.52 27.44 A 28 28 0 0 1 80.48 92.56" />
+              <path d="M 80.48 27.44 A 28 28 0 0 1 39.52 92.56" />
+            </g>
+          </svg>
+        </div>
+        <span class="brand-text">Realz</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/incidents/">Incidents</a>
+        <a href="/blog/">Blog</a>
+        <a href="/support/">Support</a>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -27,7 +106,7 @@
     
     <li>
       <a href="/blog/test-blog/">Test blog post</a><br>
-      <small>2026-03-12 10:00:00+00:00</small>
+      <small>2026-03-12</small>
     </li>
     
   </ul>
@@ -36,8 +115,26 @@
 
   </main>
 
-  <footer>
-    <p>© Realz</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>Realz</strong><br>
+        Verify your moment
+      </div>
+
+      <div class="footer-meta">
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/incidents/">Incidents</a>
+          <a href="/blog/">Blog</a>
+          <a href="/support/">Support</a>
+        </div>
+        <div class="footer-credit">© Realz</div>
+      </div>
+    </div>
   </footer>
+
+  <script src="/script.js"></script>
+  
 </body>
 </html>

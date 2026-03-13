@@ -3,45 +3,544 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Incidents | Realz</title>
+
+  <title>AI Impersonation & Deepfake Incidents | Realz</title>
+  <meta
+    name="description"
+    content="
+Documented incidents related to deepfakes, AI impersonation, voice cloning, synthetic media, and digital identity abuse.
+"
+  >
+
+  
+  <link rel="canonical" href="https://realz.me/incidents/">
+  
+
+  <meta property="og:title" content="AI Impersonation &amp; Deepfake Incidents | Realz">
+  <meta property="og:description" content="Documented incidents related to deepfakes, AI impersonation, voice cloning, synthetic media, and digital identity abuse.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Realz">
+
+  
+  <meta property="og:url" content="https://realz.me/incidents/">
+  
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Impersonation &amp; Deepfake Incidents | Realz">
+  <meta name="twitter:description" content="Documented incidents related to deepfakes, AI impersonation, voice cloning, synthetic media, and digital identity abuse.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="/styles.css">
+
+  
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/incidents">Incidents</a>
-      <a href="/blog">Blog</a>
-      <a href="/support">Support</a>
-    </nav>
+  <div class="page-bg"></div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="brand" aria-label="Realz home">
+        <div class="brand-mark brand-mark-small" aria-hidden="true">
+          <svg
+            class="realz-logo-svg"
+            viewBox="0 0 120 120"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Realz logo"
+          >
+            <defs>
+              <linearGradient id="realzGradOuterBaseNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#66FFB2" />
+                <stop offset="100%" stop-color="#2DA8FF" />
+              </linearGradient>
+              <linearGradient id="realzGradInnerBaseNav" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#66FFB2" />
+                <stop offset="100%" stop-color="#2DA8FF" />
+              </linearGradient>
+              <filter id="logoGlowBaseNav" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="2.2" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+
+            <g class="outer-ring" filter="url(#logoGlowBaseNav)" stroke="url(#realzGradOuterBaseNav)" stroke-width="10" stroke-linecap="butt" fill="none">
+              <path d="M 27.07 23.46 A 44 44 0 0 1 68.86 16.96" />
+              <path d="M 96.54 27.07 A 44 44 0 0 1 103.04 68.86" />
+              <path d="M 92.93 96.54 A 44 44 0 0 1 51.14 103.04" />
+              <path d="M 23.46 92.93 A 44 44 0 0 1 16.96 51.14" />
+            </g>
+
+            <g class="inner-ring-spin" filter="url(#logoGlowBaseNav)" stroke="url(#realzGradInnerBaseNav)" stroke-width="8" stroke-linecap="butt" fill="none">
+              <path d="M 39.52 27.44 A 28 28 0 0 1 80.48 92.56" />
+              <path d="M 80.48 27.44 A 28 28 0 0 1 39.52 92.56" />
+            </g>
+          </svg>
+        </div>
+        <span class="brand-text">Realz</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/incidents/">Incidents</a>
+        <a href="/blog/">Blog</a>
+        <a href="/support/">Support</a>
+      </nav>
+    </div>
   </header>
 
   <main>
     
-<section>
-  <h1>Incident Collection</h1>
-  <p>Documented incidents related to deepfakes, synthetic media and digital trust.</p>
+<section class="listing-hero">
+  <div class="container listing-hero-grid">
+    <div class="hero-copy reveal">
+      <div class="eyebrow">Incident archive</div>
+      <h1>Documented incidents in AI impersonation and digital trust</h1>
+      <p class="hero-lead">
+        Realz documents public incidents involving deepfakes, voice cloning,
+        synthetic media, impersonation, and digital identity abuse.
+      </p>
+      <p class="hero-secondary">
+        This archive is designed to make emerging trust risks easier to understand,
+        easier to track, and easier to reference over time.
+      </p>
 
-  
-  <ul>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#incident-list">Browse incidents</a>
+        <a class="button button-secondary" href="/blog/">Read blog</a>
+        <a class="button button-secondary" href="/">Back to realz.me</a>
+      </div>
+    </div>
+
+    <div class="hero-card reveal">
+      <div class="hero-card-header">
+        <div>
+          <div class="hero-card-title">Incident tracking</div>
+          <div class="hero-card-subtitle">Signals of digital trust under pressure</div>
+        </div>
+      </div>
+
+      <div class="hero-facts">
+        <div class="fact-row">
+          <span>Coverage</span>
+          <strong>Publicly documented incidents</strong>
+        </div>
+        <div class="fact-row">
+          <span>Focus</span>
+          <strong>Deepfakes, impersonation, abuse</strong>
+        </div>
+        <div class="fact-row">
+          <span>Format</span>
+          <strong>Structured incident pages</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 30px;">
+  <div class="container">
+    <div class="cards-grid listing-summary-grid">
+      <article class="info-card reveal">
+        <h3>What this archive covers</h3>
+        <p>
+          Incident pages include summaries, structured metadata, and source links for
+          events involving AI-generated deception, synthetic identity misuse, and trust breakdowns online.
+        </p>
+      </article>
+
+      <article class="info-card reveal">
+        <h3>Why this matters</h3>
+        <p>
+          Deepfake and impersonation incidents are not just media problems. They affect safety,
+          fraud exposure, verification, and how people decide what to trust.
+        </p>
+      </article>
+
+      <article class="info-card reveal">
+        <h3>How to use it</h3>
+        <p>
+          Browse incidents by title and context, open each record for details, and use the linked
+          sources for further review.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="incident-list">
+  <div class="container">
+    <div class="section-heading reveal">
+      <span class="eyebrow">Published incidents</span>
+      <h2>Incident collection</h2>
+      <p>
+        A structured archive of publicly reported incidents related to synthetic media,
+        AI impersonation, and digital identity abuse.
+      </p>
+    </div>
+
     
-    <li>
-      <a href="/incidents/test-incident/">Test incident</a><br>
-      <small>
-        2026-03-12
-         · Norway
-         · facebook
-      </small>
-    </li>
+    <div class="listing-grid">
+      
+      <article class="post-card reveal">
+        <div class="post-card-top">
+          <p class="post-meta">
+            <span>YYYY-MM-DD</span>
+
+            
+
+            
+          </p>
+
+          <h3 class="post-card-title">
+            <a href="/incidents/example-incident-slug/">Example incident title</a>
+          </h3>
+
+          
+        </div>
+
+        
+        <p class="post-excerpt">Incident summary goes here.</p>
+        
+
+        
+        <p class="post-topics">
+          <strong>Topics:</strong>
+          Deepfake
+        </p>
+        
+
+        <div class="post-card-footer">
+          <a class="text-link" href="/incidents/example-incident-slug/">Read incident →</a>
+        </div>
+      </article>
+      
+      <article class="post-card reveal">
+        <div class="post-card-top">
+          <p class="post-meta">
+            <span>2026-03-12</span>
+
+            
+              <span>· Norway</span>
+            
+
+            
+              <span>· Facebook</span>
+            
+          </p>
+
+          <h3 class="post-card-title">
+            <a href="/incidents/test-incident/">Test incident</a>
+          </h3>
+
+          
+          <div class="tag-row">
+            <span class="tag">
+              Fraud
+            </span>
+
+            
+          </div>
+          
+        </div>
+
+        
+        <p class="post-excerpt">This is a test incident page.</p>
+        
+
+        
+        <p class="post-topics">
+          <strong>Topics:</strong>
+          Deepfake
+        </p>
+        
+
+        <div class="post-card-footer">
+          <a class="text-link" href="/incidents/test-incident/">Read incident →</a>
+        </div>
+      </article>
+      
+      <article class="post-card reveal">
+        <div class="post-card-top">
+          <p class="post-meta">
+            <span>2026-02-13</span>
+
+            
+              <span>· United States</span>
+            
+
+            
+              <span>· Phone</span>
+            
+          </p>
+
+          <h3 class="post-card-title">
+            <a href="/incidents/chicago-suburb-warns-of-ai-voice-cloning-scams-that-impersonate-loved-ones/">Chicago suburb warns of AI voice cloning scams that impersonate loved ones</a>
+          </h3>
+
+          
+          <div class="tag-row">
+            <span class="tag">
+              Voice Cloning Scam
+            </span>
+
+            
+            <span class="tag tag-muted">
+              Reported But Unverified
+            </span>
+            
+          </div>
+          
+        </div>
+
+        
+        <p class="post-excerpt">The Berwyn Police Department warned residents about a scam in which callers use artificial intelligence to clone voices and impersonate loved ones or trusted officials. Scammers reportedly call victims urging them to send money or share personal information; police advise hanging up, calling the impersonated person using a known number to verify, avoiding urgent or secret payment requests, and reporting suspected scams to the Berwyn Police Department.</p>
+        
+
+        
+        <p class="post-topics">
+          <strong>Topics:</strong>
+          Voice Cloning, Ai Impersonation, Manipulated Identity, Synthetic Media, Authenticity Harm, Digital Identity Abuse
+        </p>
+        
+
+        <div class="post-card-footer">
+          <a class="text-link" href="/incidents/chicago-suburb-warns-of-ai-voice-cloning-scams-that-impersonate-loved-ones/">Read incident →</a>
+        </div>
+      </article>
+      
+      <article class="post-card reveal">
+        <div class="post-card-top">
+          <p class="post-meta">
+            <span>2026-02-04</span>
+
+            
+              <span>· United States</span>
+            
+
+            
+              <span>· Phone</span>
+            
+          </p>
+
+          <h3 class="post-card-title">
+            <a href="/incidents/ai-voice-cloning-scams-hit-lawrence-what-you-need-to-know/">AI Voice Cloning Scams Hit Lawrence: What You Need to Know</a>
+          </h3>
+
+          
+          <div class="tag-row">
+            <span class="tag">
+              Voice Cloning Scam
+            </span>
+
+            
+            <span class="tag tag-muted">
+              Reported But Unverified
+            </span>
+            
+          </div>
+          
+        </div>
+
+        
+        <p class="post-excerpt">In Lawrence, Kansas, police responded after a family member received a phone call in which the caller ID showed the mother’s number and a voice that sounded like the mother said a man had a gun to her head and was demanding money. The caller’s brother received the same call and the mother was not answering her phone.
+Officers used a shared location app to track the mother’s phone, followed a moving location to a vehicle, and conducted a high‑risk vehicle stop; the occupants complied and were not involved. The report states the incident involved AI voice cloning and caller ID spoofing and notes many similar cases originate overseas and often go unsolved.</p>
+        
+
+        
+        <p class="post-topics">
+          <strong>Topics:</strong>
+          Voice Cloning, Ai Impersonation, Digital Identity Abuse, Authenticity Harm
+        </p>
+        
+
+        <div class="post-card-footer">
+          <a class="text-link" href="/incidents/ai-voice-cloning-scams-hit-lawrence-what-you-need-to-know/">Read incident →</a>
+        </div>
+      </article>
+      
+      <article class="post-card reveal">
+        <div class="post-card-top">
+          <p class="post-meta">
+            <span>2025-12-19</span>
+
+            
+              <span>· United States</span>
+            
+
+            
+              <span>· Messaging App</span>
+            
+          </p>
+
+          <h3 class="post-card-title">
+            <a href="/incidents/fbi-says-ongoing-deepfake-impersonation-of-u-s-gov-officials-dates-back-to-2023/">FBI says ‘ongoing’ deepfake impersonation of U.S. gov officials dates back to 2023</a>
+          </h3>
+
+          
+          <div class="tag-row">
+            <span class="tag">
+              Voice Cloning Scam
+            </span>
+
+            
+            <span class="tag tag-muted">
+              Reported But Unverified
+            </span>
+            
+          </div>
+          
+        </div>
+
+        
+        <p class="post-excerpt">The FBI warned that unknown actors have used AI voice cloning and other synthetic-media tools to impersonate senior U.S. government officials and to extract sensitive or classified information or conduct scams. The bureau said the campaign uses SMS to initiate contact, moves victims to encrypted messaging apps (Signal, WhatsApp, Telegram) or voice calls, and then employs familiar talking points—including offers of meetings with high-ranking officials or board nominations—to obtain passport photos, access to contact lists, wire transfers, or other sensitive data.</p>
+        
+
+        
+        <p class="post-topics">
+          <strong>Topics:</strong>
+          Deepfake, Ai Impersonation, Synthetic Media, Manipulated Identity, Digital Identity Abuse, Authenticity Harm
+        </p>
+        
+
+        <div class="post-card-footer">
+          <a class="text-link" href="/incidents/fbi-says-ongoing-deepfake-impersonation-of-u-s-gov-officials-dates-back-to-2023/">Read incident →</a>
+        </div>
+      </article>
+      
+      <article class="post-card reveal">
+        <div class="post-card-top">
+          <p class="post-meta">
+            <span>2025-07-24</span>
+
+            
+              <span>· United States</span>
+            
+
+            
+              <span>· Phone</span>
+            
+          </p>
+
+          <h3 class="post-card-title">
+            <a href="/incidents/florida-woman-loses-15k-to-ai-voice-scam-mimicking-daughter-in-distress/">Florida Woman Loses $15K to AI Voice Scam Mimicking Daughter in Distress</a>
+          </h3>
+
+          
+          <div class="tag-row">
+            <span class="tag">
+              Voice Cloning Scam
+            </span>
+
+            
+            <span class="tag tag-muted">
+              Reported But Unverified
+            </span>
+            
+          </div>
+          
+        </div>
+
+        
+        <p class="post-excerpt">A Hillsborough County, Florida woman identified as Sharon was defrauded of $15,000 after callers used a cloned version of her daughter’s voice to claim the daughter had been arrested following a car crash and to demand bail money. According to reporting the call occurred on July 12 (year not specified); Sharon withdrew the funds, handed them to a courier who arrived in a black Chevy Tahoe, and callers later demanded another $30,000 before the family reached the real daughter, who was at work and unharmed.</p>
+        
+
+        
+        <p class="post-topics">
+          <strong>Topics:</strong>
+          Voice Cloning, Ai Impersonation, Synthetic Media, Manipulated Identity, Authenticity Harm, Digital Identity Abuse
+        </p>
+        
+
+        <div class="post-card-footer">
+          <a class="text-link" href="/incidents/florida-woman-loses-15k-to-ai-voice-scam-mimicking-daughter-in-distress/">Read incident →</a>
+        </div>
+      </article>
+      
+      <article class="post-card reveal">
+        <div class="post-card-top">
+          <p class="post-meta">
+            <span>2025-07-12</span>
+
+            
+              <span>· United States</span>
+            
+
+            
+              <span>· Phone</span>
+            
+          </p>
+
+          <h3 class="post-card-title">
+            <a href="/incidents/florida-woman-loses-15k-to-ai-voice-scam-mimicking-daughter-in-distress/">Florida Woman Loses $15K to AI Voice Scam Mimicking Daughter in Distress</a>
+          </h3>
+
+          
+          <div class="tag-row">
+            <span class="tag">
+              Voice Cloning Scam
+            </span>
+
+            
+            <span class="tag tag-muted">
+              Reported But Unverified
+            </span>
+            
+          </div>
+          
+        </div>
+
+        
+        <p class="post-excerpt">On July 12, a Hillsborough County, Florida woman (identified as Sharon) received a panicked phone call that sounded like her daughter, who claimed to have been arrested after a car crash. A caller claiming to be a lawyer then demanded $15,000 for bail; Sharon withdrew the money and delivered it to a person who arrived to collect it. The family later confirmed the real daughter was at work and the call was fraudulent, leaving Sharon and her husband out $15,000.</p>
+        
+
+        
+        <p class="post-topics">
+          <strong>Topics:</strong>
+          Voice Cloning, Ai Impersonation, Synthetic Media, Manipulated Identity, Authenticity Harm, Digital Identity Abuse
+        </p>
+        
+
+        <div class="post-card-footer">
+          <a class="text-link" href="/incidents/florida-woman-loses-15k-to-ai-voice-scam-mimicking-daughter-in-distress/">Read incident →</a>
+        </div>
+      </article>
+      
+    </div>
     
-  </ul>
-  
+  </div>
 </section>
 
   </main>
 
-  <footer>
-    <p>© Realz</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>Realz</strong><br>
+        Verify your moment
+      </div>
+
+      <div class="footer-meta">
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/incidents/">Incidents</a>
+          <a href="/blog/">Blog</a>
+          <a href="/support/">Support</a>
+        </div>
+        <div class="footer-credit">© Realz</div>
+      </div>
+    </div>
   </footer>
+
+  <script src="/script.js"></script>
+  
 </body>
 </html>

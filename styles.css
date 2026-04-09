@@ -721,6 +721,18 @@ svg {
   align-items: center;
 }
 
+.blog-article-hero-grid {
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 22px;
+  align-items: start;
+}
+
+.blog-article-overview {
+  width: 100%;
+  max-width: none;
+  justify-self: end;
+}
+
 .listing-summary-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }

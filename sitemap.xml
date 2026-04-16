@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://realz.me/</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-16</lastmod>
   </url>
   <url>
     <loc>https://realz.me/support/</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-16</lastmod>
   </url>
   <url>
     <loc>https://realz.me/incidents/</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-16</lastmod>
   </url>
   <url>
     <loc>https://realz.me/blog/</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-04-16</lastmod>
   </url>
   <url>
     <loc>https://realz.me/incidents/idf-publiserte-falskt-bilde-av-drept-journalist-i-milit-runiform/</loc>
@@ -67,6 +67,10 @@
   <url>
     <loc>https://realz.me/incidents/brukte-ki-manipulert-bilde-fra-tr-nder-avisa-for-lure-aftenposten-n-r-vi-har-blitt-lurt-m-vi-bare-innr-mme-det-altinget/</loc>
     <lastmod>2026-04-09T15:25:05Z</lastmod>
+  </url>
+  <url>
+    <loc>https://realz.me/blog/when-manipulated-images-become-a-trust-problem/</loc>
+    <lastmod>2026-04-16T20:45:41Z</lastmod>
   </url>
   <url>
     <loc>https://realz.me/blog/when-images-stop-being-evidence-what-a-small-set-of-recent-deepfake-and-manipulated-photo-incidents-tells-us/</loc>

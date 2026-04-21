@@ -360,9 +360,13 @@
             Realz is built to make authenticity easier to understand and easier to verify.
             Support should feel just as simple and trustworthy as the product itself.
           </p>
+          <p class="hero-secondary" style="margin-top: 12px;">
+            If you need to report a public verify page or shared content, you can use the same support flow here.
+          </p>
 
           <div class="support-actions">
             <a class="button button-primary" href="#contact">Contact support</a>
+            <a class="button button-secondary" href="#contact">Report public content</a>
             <a class="button button-secondary" href="#data-deletion">Data deletion</a>
             <a class="button button-secondary" href="https://getrealz.app" target="_blank" rel="noreferrer">
               Open verify service
@@ -379,8 +383,8 @@
           <h3>What we can help with</h3>
           <p>
             Support covers questions about verification, invalid or incomplete verify links,
-            app-related access issues, data deletion requests, launch availability, and general questions about how
-            Realz works.
+            public content reports, app-related access issues, data deletion requests, launch availability, and
+            general questions about how Realz works.
           </p>
 
           <div class="hero-facts" style="margin-top: 18px;">
@@ -395,6 +399,10 @@
             <div class="fact-row">
               <span>Response target</span>
               <strong>1–3 business days</strong>
+            </div>
+            <div class="fact-row">
+              <span>Public content reports</span>
+              <strong>Handled manually</strong>
             </div>
           </div>
         </div>
@@ -492,6 +500,8 @@
             <input type="hidden" name="_next" id="nextField" value="" />
             <input type="hidden" name="product" value="Realz" />
             <input type="hidden" name="source" value="Realz_Web" />
+            <input type="hidden" name="proof_id" id="proofIdField" value="" />
+            <input type="hidden" name="verify_url" id="verifyUrlField" value="" />
 
             <div class="formgrid">
               <div class="field">
@@ -510,6 +520,7 @@
               <select id="subject" name="subject" required>
                 <option>Verification issue</option>
                 <option>Broken verify link</option>
+                <option>Report public content</option>
                 <option>Bug report</option>
                 <option>Feature request</option>
                 <option>General question</option>
@@ -540,6 +551,9 @@
             <p class="formhint">
               For deletion requests, include the email address connected to your Realz account. If you only want part of your data
               removed, describe exactly what should be deleted.
+            </p>
+            <p class="formhint">
+              For public content reports, include the verify link if available and explain briefly why the content should be reviewed.
             </p>
           </form>
         </article>
@@ -659,12 +673,48 @@
       const statusBox = document.getElementById("form-status");
       const form = document.getElementById("realz-support-form");
       const iframe = document.getElementById("formcarry_iframe");
+      const subjectField = document.getElementById("subject");
+      const messageField = document.getElementById("message");
+      const proofIdField = document.getElementById("proofIdField");
+      const verifyUrlField = document.getElementById("verifyUrlField");
 
       if (nextField) {
         nextField.value = window.location.origin + window.location.pathname + "?submitted=1#contact";
       }
 
       const params = new URLSearchParams(window.location.search);
+      const requestedSubject = params.get("subject");
+      const requestedProofId = params.get("proof_id");
+      const requestedVerifyUrl = params.get("verify_url");
+      const requestedMessage = params.get("message");
+
+      if (requestedSubject && subjectField) {
+        const optionExists = Array.from(subjectField.options).some(function (option) {
+          return option.value === requestedSubject;
+        });
+        if (optionExists) subjectField.value = requestedSubject;
+      }
+
+      if (requestedProofId && proofIdField) {
+        proofIdField.value = requestedProofId;
+      }
+
+      if (requestedVerifyUrl && verifyUrlField) {
+        verifyUrlField.value = requestedVerifyUrl;
+      }
+
+      if (messageField && !messageField.value) {
+        if (requestedMessage) {
+          messageField.value = requestedMessage;
+        } else if (requestedProofId || requestedVerifyUrl) {
+          const parts = [];
+          if (requestedProofId) parts.push("Proof ID: " + requestedProofId);
+          if (requestedVerifyUrl) parts.push("Verify URL: " + requestedVerifyUrl);
+          parts.push("", "Please describe why this content should be reviewed.");
+          messageField.value = parts.join("\n");
+        }
+      }
+
       if (params.get("submitted") === "1") {
         statusBox.textContent = "Your message was sent successfully. Thanks — we’ll review it as soon as possible.";
         statusBox.className = "form-status is-visible is-success";

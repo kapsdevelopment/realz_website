@@ -3,10 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Realz — Verify your moment</title>
+  <title>Realz | Verified Photos and Image Authenticity</title>
   <meta
     name="description"
-    content="Realz helps prove that a photo was captured as it happened — with a public cryptographic proof that can be verified by anyone."
+    content="Realz helps you capture verified photos and prove image authenticity with public verification. Download the iPhone app or verify shared images on the web."
+  />
+  <link rel="canonical" href="https://realz.me/" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="Realz | Verified Photos and Image Authenticity" />
+  <meta
+    property="og:description"
+    content="Realz helps you capture verified photos and prove image authenticity with public verification. Download the iPhone app or verify shared images on the web."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Realz" />
+  <meta property="og:url" content="https://realz.me/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Realz | Verified Photos and Image Authenticity" />
+  <meta
+    name="twitter:description"
+    content="Realz helps you capture verified photos and prove image authenticity with public verification. Download the iPhone app or verify shared images on the web."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,13 +31,35 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "Realz",
+          "url": "https://realz.me/",
+          "description": "Realz helps you capture verified photos and prove image authenticity with public verification. Download the iPhone app or verify shared images on the web."
+        },
+        {
+          "@type": "Organization",
+          "name": "Realz",
+          "url": "https://realz.me/",
+          "sameAs": [
+            "https://apps.apple.com/us/app/realz-verified/id6758781848",
+            "https://getrealz.app/"
+          ]
+        }
+      ]
+    }
+  </script>
 </head>
 <body>
   <div class="page-bg"></div>
 
   <header class="site-header">
     <div class="container nav">
-      <a href="#" class="brand" aria-label="Realz home">
+      <a href="/" class="brand" aria-label="Realz home">
         <div class="brand-mark brand-mark-small" aria-hidden="true">
           <svg
             class="realz-logo-svg"
@@ -64,26 +102,25 @@
           <div class="eyebrow">Authenticity, made practical</div>
           <h1>Verify your moment</h1>
           <p class="hero-lead">
-            Realz is built for a world where AI-generated images, deepfakes,
-            deceptive edits, and aggressive social media filters make visual trust harder than ever.
-            It helps prove that a photo was captured as it happened.
+            Realz helps you capture verified photos in a world shaped by deepfakes,
+            deceptive edits, and synthetic media.
           </p>
 
           <p class="hero-secondary">
-            When an image is taken inside the Realz app, a
-            <strong>public cryptographic proof</strong> can be created and made available for
-            independent verification. That makes it possible to show not just the image itself,
-            but that the image has not been tampered with after capture.
+            When a photo is taken inside the Realz app, a
+            <strong>public cryptographic proof</strong> can be created for independent verification.
+            That makes it possible to show not just the image, but that it has not been altered after capture.
           </p>
 
           <div class="hero-actions">
             <a
-              class="button button-primary"
+              class="store-badge-link"
               href="https://apps.apple.com/us/app/realz-verified/id6758781848"
               target="_blank"
               rel="noreferrer"
+              aria-label="Download Realz on the App Store"
             >
-              Download on the App Store
+              <img src="app-store-badge.svg" alt="Download on the App Store" />
             </a>
             <a class="button button-secondary" href="https://getrealz.app" target="_blank" rel="noreferrer">
               Open verify service
@@ -125,7 +162,7 @@
 
               <div>
                 <div class="hero-card-title">Realz</div>
-                <div class="hero-card-subtitle">Public authenticity verification</div>
+                <div class="hero-card-subtitle">A fight for reality</div>
               </div>
             </div>
 
@@ -332,25 +369,28 @@
       <div class="container availability-wrap">
         <div class="section-heading narrow">
           <span class="eyebrow">Availability</span>
-          <h2>Realz is now available on iPhone</h2>
+          <h2>Download Realz on iPhone</h2>
           <p>
-            Realz is now live on the App Store for iPhone. Android availability is still under development,
-            while the verification service remains available on the web.
+            Realz is now available on the App Store for iPhone. Android is still under development,
+            while web verification remains available at getrealz.app.
           </p>
         </div>
 
         <div class="store-grid">
-          <div class="store-card">
-            <div class="store-icon"></div>
-            <div>
-              <h3>App Store</h3>
-              <p>
-                <a href="https://apps.apple.com/us/app/realz-verified/id6758781848" target="_blank" rel="noreferrer">
-                  Available now
-                </a>
-              </p>
+          <a
+            class="store-card store-card-link app-store-card"
+            href="https://apps.apple.com/us/app/realz-verified/id6758781848"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Download Realz on the App Store"
+          >
+            <div class="store-card-copy">
+              <span class="store-kicker">iPhone app</span>
+              <h3>Download Realz on the App Store</h3>
+              <p>Available now for iPhone.</p>
             </div>
-          </div>
+            <img class="store-badge" src="app-store-badge.svg" alt="Download on the App Store" />
+          </a>
 
           <div class="store-card">
             <div class="store-icon">▶</div>
@@ -365,6 +405,39 @@
           Want to explore verification in the browser right now? Visit
           <a href="https://getrealz.app" target="_blank" rel="noreferrer">getrealz.app</a>.
         </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-heading narrow">
+          <span class="eyebrow">Latest from Realz</span>
+          <h2>Latest analysis</h2>
+          <p>
+            Our latest analysis looks at how manipulated images create a growing verification burden
+            for platforms, institutions, and the public.
+          </p>
+        </div>
+
+        <a class="post-card featured-post-card" href="/blog/when-manipulated-images-become-a-trust-problem/">
+          <div class="post-card-top">
+            <p class="post-meta">
+              <span>2026-04-16</span>
+              <span>· Visual Authenticity, Political Image Manipulation, And The Growing Verification Burden</span>
+            </p>
+
+            <h3 class="post-card-title">When Manipulated Images Become a Trust Problem</h3>
+          </div>
+
+          <p class="post-excerpt">
+            Our latest article explores how manipulated images raise the verification burden for
+            institutions, platforms, and the public even when the immediate harm is not always obvious.
+          </p>
+
+          <div class="post-card-footer">
+            <span class="text-link">Read latest article →</span>
+          </div>
+        </a>
       </div>
     </section>
   </main>

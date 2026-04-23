@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://realz.me/sitemap.xml

@@ -667,14 +667,30 @@ svg {
 }
 
 .availability-wrap {
-  text-align: center;
+  text-align: left;
+}
+
+.availability-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1fr);
+  gap: 42px;
+  align-items: center;
+}
+
+.availability-copy .section-heading {
+  margin-bottom: 0;
+}
+
+.availability-copy .section-heading.narrow,
+.availability-copy .availability-note {
+  max-width: 620px;
 }
 
 .store-grid {
-  margin-top: 26px;
+  margin-top: 0;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 280px));
-  justify-content: center;
+  grid-template-columns: 1fr;
+  justify-content: stretch;
   gap: 18px;
 }
 
@@ -709,10 +725,9 @@ svg {
 }
 
 .app-store-card {
-  grid-column: 1 / -1;
   width: 100%;
-  max-width: 660px;
-  justify-self: center;
+  max-width: none;
+  justify-self: stretch;
   justify-content: space-between;
   padding: 24px 24px 22px;
   background:
@@ -906,8 +921,19 @@ svg {
   .split-section,
   .cards-grid,
   .proof-promise-grid,
-  .proof-flow-grid {
+  .proof-flow-grid,
+  .availability-layout {
     grid-template-columns: 1fr;
+  }
+
+  .availability-wrap {
+    text-align: center;
+  }
+
+  .availability-copy .section-heading.narrow,
+  .availability-copy .availability-note {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .proof-flow-grid::before {
@@ -956,6 +982,16 @@ svg {
 
   .store-grid {
     grid-template-columns: 1fr;
+  }
+
+  .availability-wrap {
+    text-align: left;
+  }
+
+  .availability-copy .section-heading.narrow,
+  .availability-copy .availability-note {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .app-store-card {

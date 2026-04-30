@@ -132,8 +132,8 @@ svg {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
-  gap: 26px clamp(36px, 6vw, 88px);
+  grid-template-columns: minmax(0, 0.9fr) minmax(460px, 1fr);
+  gap: 26px clamp(32px, 5vw, 72px);
   align-items: center;
 }
 
@@ -172,10 +172,15 @@ svg {
 }
 
 .hero-store-actions {
+  width: 100%;
+  max-width: 660px;
   justify-self: end;
   display: grid;
-  justify-items: end;
   gap: 18px;
+}
+
+.hero-store-card {
+  min-height: 136px;
 }
 
 .button {
@@ -204,24 +209,6 @@ svg {
   box-shadow:
     0 8px 26px rgba(53, 184, 255, 0.18),
     0 8px 22px rgba(102, 255, 178, 0.1);
-}
-
-.store-badge-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 160ms ease, opacity 160ms ease;
-}
-
-.store-badge-link:hover {
-  transform: translateY(-1px);
-  opacity: 0.96;
-}
-
-.store-badge-link img {
-  display: block;
-  height: 56px;
-  width: auto;
 }
 
 .button-secondary {
@@ -930,10 +917,11 @@ svg {
   }
 
   .hero-store-actions {
+    width: 100%;
+    max-width: 660px;
     justify-self: start;
-    display: flex;
-    flex-wrap: wrap;
-    justify-items: start;
+    display: grid;
+    justify-items: stretch;
   }
 
   .availability-wrap {
@@ -978,9 +966,7 @@ svg {
   }
 
   .hero-store-actions {
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
+    max-width: none;
   }
 
   .proof-promise-copy h2 {

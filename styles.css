@@ -132,7 +132,7 @@ svg {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(460px, 1fr);
+  grid-template-columns: minmax(0, 0.78fr) minmax(520px, 1.08fr);
   gap: 26px clamp(32px, 5vw, 72px);
   align-items: center;
 }
@@ -173,7 +173,7 @@ svg {
 
 .hero-store-actions {
   width: 100%;
-  max-width: 660px;
+  max-width: 720px;
   justify-self: end;
   display: grid;
   gap: 18px;
@@ -918,7 +918,7 @@ svg {
 
   .hero-store-actions {
     width: 100%;
-    max-width: 660px;
+    max-width: 720px;
     justify-self: start;
     display: grid;
     justify-items: stretch;

@@ -132,7 +132,8 @@ svg {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 820px);
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: 26px clamp(36px, 6vw, 88px);
   align-items: center;
 }
 
@@ -170,11 +171,16 @@ svg {
   line-height: 1.8;
 }
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
+.hero-store-actions {
+  justify-self: end;
+  display: grid;
   gap: 14px;
-  margin-top: 30px;
+  padding: 20px;
+  border-radius: 26px;
+  background:
+    linear-gradient(180deg, rgba(16, 26, 48, 0.62), rgba(8, 14, 28, 0.38));
+  border: 1px solid rgba(132, 170, 219, 0.2);
+  box-shadow: var(--shadow-md);
 }
 
 .button {
@@ -235,7 +241,8 @@ svg {
 }
 
 .hero-links {
-  margin-top: 22px;
+  grid-column: 1;
+  margin-top: 0;
   color: var(--muted-2);
   display: flex;
   flex-wrap: wrap;
@@ -922,8 +929,19 @@ svg {
   .cards-grid,
   .proof-promise-grid,
   .proof-flow-grid,
-  .availability-layout {
+  .availability-layout,
+  .hero-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-store-actions {
+    justify-self: start;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
   }
 
   .availability-wrap {

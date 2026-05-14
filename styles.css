@@ -652,7 +652,24 @@ svg {
 }
 
 .tech-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.content-credentials-callout {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  gap: 18px;
+  align-items: center;
+}
+
+.content-credentials-callout h3 {
+  font-size: 1.25rem;
+}
+
+.content-credentials-callout .text-link {
+  display: inline-flex;
+  margin-top: 14px;
 }
 
 .availability-wrap {
@@ -912,6 +929,7 @@ svg {
   .proof-promise-grid,
   .proof-flow-grid,
   .availability-layout,
+  .content-credentials-callout,
   .hero-grid {
     grid-template-columns: 1fr;
   }

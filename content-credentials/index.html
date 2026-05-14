@@ -6,7 +6,7 @@
   <title>C2PA-Compatible Content Credentials For Verified Photos | Realz</title>
   <meta
     name="description"
-    content="Realz can add embedded, C2PA-compatible Content Credentials to verified photo exports, combining public Realz proof links with portable image provenance metadata."
+    content="Realz adds C2PA-compatible Content Credentials to verified photo exports, combining public Realz proof links with portable image provenance metadata."
   />
   <link rel="canonical" href="https://realz.me/content-credentials/" />
   <meta name="robots" content="index,follow" />
@@ -42,7 +42,7 @@
               "name": "Does Realz support C2PA Content Credentials?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Realz can add embedded, C2PA-compatible Content Credentials to verified photo exports, including Realz proof links and integrity metadata."
+                "text": "Yes. Realz adds embedded, C2PA-compatible Content Credentials to verified photo exports, including Realz proof links and integrity metadata."
               }
             },
             {
@@ -50,7 +50,7 @@
               "name": "Do Content Credentials replace the Realz verification page?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "No. The Realz verification page remains the canonical proof surface. Content Credentials help provenance metadata travel with exported image files where supported."
+                "text": "No. The Realz verification page remains the canonical proof surface. Content Credentials help provenance metadata travel with exported image files."
               }
             },
             {
@@ -58,7 +58,7 @@
               "name": "Can platforms remove C2PA metadata?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Some platforms may recompress images or strip metadata. Realz keeps the public verification link as a separate proof surface when metadata does not survive distribution."
+                "text": "Yes. Some platforms recompress images or strip metadata. Realz keeps the public verification link as a separate proof surface when metadata does not survive distribution."
               }
             }
           ]
@@ -99,9 +99,10 @@
           <span class="eyebrow">C2PA-compatible exports</span>
           <h1>Content Credentials for verified photo exports</h1>
           <p>
-            Realz is capture-first: the proof starts when a photo is taken inside
-            the app. C2PA-compatible Content Credentials add a second layer for
-            exported files, helping provenance metadata travel with the image.
+            Realz is capture-first. The proof starts when a photo is taken inside
+            the app. When you export a verified photo with Content Credentials
+            enabled, Realz adds C2PA-compatible metadata so provenance travels
+            with the image file.
           </p>
         </div>
 
@@ -110,7 +111,7 @@
           <p>
             Verified photo exports for publishing, documentation, review, and
             professional workflows where the image file itself should carry a
-            readable provenance signal.
+            readable provenance signal alongside the public Realz proof.
           </p>
         </aside>
       </div>
@@ -122,32 +123,31 @@
           <article class="article-panel notice-panel">
             <h2>How C2PA fits the Realz proof model</h2>
             <p>
-              Realz creates a proof around the captured photo bytes and exposes a
-              public verification page when the user chooses to share. For
-              exported images, Realz can also embed C2PA-compatible Content
-              Credentials that reference the Realz proof and include integrity
-              metadata inside the JPEG file.
+              Realz creates a proof around the captured photo bytes. When a user
+              shares or exports a verified photo, we keep the Realz verification
+              page as the primary proof surface. For exports with Content
+              Credentials enabled, we also embed C2PA-compatible metadata inside
+              the JPEG file.
             </p>
           </article>
 
           <article class="article-panel">
-            <h2>What Realz can include</h2>
+            <h2>What the export includes</h2>
             <ul class="use-case-list">
               <li>A Realz proof URL that people can open independently.</li>
               <li>The Realz proof identifier for the verified capture.</li>
               <li>Integrity metadata that connects the export back to the Realz proof.</li>
-              <li>Creator or copyright fields when the user chooses to configure them.</li>
+              <li>Creator or copyright fields when configured by the user.</li>
             </ul>
           </article>
 
           <article class="article-panel">
             <h2>Why this is useful</h2>
             <p>
-              C2PA-compatible Content Credentials make Realz exports easier to
-              inspect in tools that understand image provenance metadata. This is
-              especially useful when a file moves through publishing, reporting,
-              documentation, or client-review workflows where a plain image file
-              can lose context.
+              Content Credentials make Realz exports easier to inspect in tools
+              that understand image provenance metadata. That matters when a file
+              moves through publishing, reporting, documentation, or review
+              workflows where a plain image can quickly lose context.
             </p>
           </article>
 
@@ -155,9 +155,9 @@
             <h2>What remains canonical</h2>
             <p>
               The Realz verification page remains the canonical proof surface.
-              Image metadata can be stripped by some social platforms, messaging
-              apps, or image pipelines. The verify URL gives people a separate
-              place to check proof state even when metadata does not survive.
+              Some social platforms, messaging apps, and image pipelines strip
+              metadata. The verify URL gives people a separate place to check
+              proof state even when embedded metadata does not survive distribution.
             </p>
           </article>
 
@@ -166,8 +166,8 @@
             <p>
               Content Credentials do not prove every fact inside a scene, and
               they do not turn an old imported file into a Realz capture. They
-              help carry provenance information for Realz-verified exports while
-              the underlying Realz proof explains the capture and verification path.
+              carry provenance information for Realz-verified exports while the
+              underlying Realz proof explains the capture and verification path.
             </p>
           </article>
 
@@ -175,20 +175,20 @@
             <h2>Questions people ask</h2>
             <div class="faq-mini">
               <details>
-                <summary>Is Realz currently claiming C2PA certification?</summary>
+                <summary>Does Realz claim C2PA certification?</summary>
                 <p>
-                  Realz describes the feature as C2PA-compatible Content
-                  Credentials. We avoid claiming C2PA certification, conformance,
-                  or trusted-provider status unless that process has been formally completed.
+                  No. We describe this as C2PA-compatible Content Credentials.
+                  We will not claim C2PA certification, formal conformance, or
+                  trusted-provider status unless that process has been completed.
                 </p>
               </details>
               <details>
                 <summary>Does C2PA slow down taking the photo?</summary>
                 <p>
-                  The intended Realz model is to generate Content Credentials
-                  during export or sharing, not during the shutter moment. Capture
-                  proof remains the early security layer; C2PA is most valuable
-                  when a verified file is distributed.
+                  No. Turning on C2PA for exports does not slow down the capture
+                  moment. Realz creates the capture proof first, then adds
+                  C2PA-compatible Content Credentials when the verified image is
+                  exported or shared.
                 </p>
               </details>
             </div>

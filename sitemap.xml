@@ -2,19 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://realz.me/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://realz.me/support/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://realz.me/incidents/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://realz.me/blog/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
+  </url>
+  <url>
+    <loc>https://realz.me/incidents/ai-generated-image-falsely-shared-as-a-historic-photo-of-a-woman-confronting-jawaharlal-nehru-fact-crescendo/</loc>
+    <lastmod>2026-08-25T02:24:57Z</lastmod>
   </url>
   <url>
     <loc>https://realz.me/incidents/fact-check-image-purportedly-showing-nnamdi-kanu-is-ai-generated-fact-check-africa/</loc>
@@ -59,6 +63,10 @@
   <url>
     <loc>https://realz.me/incidents/milwaukee-alderman-posts-fake-photo-of-storm-damage-to-grab-attention/</loc>
     <lastmod>2026-08-20T02:28:34Z</lastmod>
+  </url>
+  <url>
+    <loc>https://realz.me/incidents/ohio-republicans-spread-altered-image-of-democratic-gubernatorial-candidates-car/</loc>
+    <lastmod>2026-08-25T02:24:57Z</lastmod>
   </url>
   <url>
     <loc>https://realz.me/incidents/spider-man-brand-new-day-concept-art-book-includes-ai-generated-image/</loc>
@@ -107,6 +115,10 @@
   <url>
     <loc>https://realz.me/incidents/a-fake-photo-allegedly-showing-a-ban-on-the-ukrainian-language-in-warsaw-taxis-is-being-circulated-online-cpd/</loc>
     <lastmod>2026-08-13T02:06:01Z</lastmod>
+  </url>
+  <url>
+    <loc>https://realz.me/incidents/ai-generated-image-distorts-death-of-haitian-woman-obscuring-rural-health-care-crisis/</loc>
+    <lastmod>2026-08-25T02:24:57Z</lastmod>
   </url>
   <url>
     <loc>https://realz.me/incidents/factcheck-ai-generated-image-falsely-shared-as-houses-built-inside-mexico-city-volcano-crater/</loc>
